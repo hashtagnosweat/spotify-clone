@@ -40,7 +40,7 @@ const isHover = () => {
 </script>
 
 <template>
-  <li
+  <div
     class="flex items-center justify-start pb-5 ml-2 cursor-pointer"
     @mouseenter="isHover()"
     @mouseleave="isHover()"
@@ -52,5 +52,5 @@ const isHover = () => {
     >
       <span :class="route.path == pageUrl ? 'text-white' : ''">{{ name }}</span>
     </div>
-  </li>
+  </div>
 </template>
