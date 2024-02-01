@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router';
+import HeartOutline from 'vue-material-design-icons/HeartOutline.vue';
 
 import playlists from '../data/playlists.json';
 import artist from '../data/artist.json';
@@ -42,51 +43,38 @@ import artist from '../data/artist.json';
   <div class="items-center text-white">
     <div class="mobile-swiper">
       <swiper-container
-        class="slideFullyVisibleClass"
-        :slides-per-view="3"
-        :space-between="5"
+        :free-mode="true"
         :breakpoints="{
-          768: {
-            slidesPerView: 3,
+          360: {
+            slidesPerView: 2.5,
+            spaceBetween: 0,
           },
         }"
       >
         <swiper-slide>
           <div class="m-2">
-            <img class="" :src="artist.albumCover" width="140" />
+            <img class="" :src="artist.albumCover" width="150" />
             <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
           </div></swiper-slide
         >
         <swiper-slide>
           <div class="m-2">
-            <img class="" :src="artist.albumCover" width="140" />
+            <img class="" :src="artist.albumCover" width="150" />
             <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
           </div></swiper-slide
         >
         <swiper-slide>
           <div class="m-2">
-            <img class="" :src="artist.albumCover" width="140" />
+            <img class="" :src="artist.albumCover" width="150" />
             <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
-          </div>
-        </swiper-slide>
+          </div></swiper-slide
+        >
         <swiper-slide>
           <div class="m-2">
-            <img class="" :src="artist.albumCover" width="140" />
+            <img class="" :src="artist.albumCover" width="150" />
             <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="m-2">
-            <img class="" :src="artist.albumCover" width="140" />
-            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="m-2">
-            <img class="" :src="artist.albumCover" width="140" />
-            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
-          </div>
-        </swiper-slide>
+          </div></swiper-slide
+        >
       </swiper-container>
     </div>
   </div>
@@ -94,57 +82,44 @@ import artist from '../data/artist.json';
     type="button"
     class="text-white text-2xl font-semibold hover:underline cursor-pointer"
   >
-    Jump back in
+    Made For You
   </button>
   <div class="py-1.5"></div>
   <div class="items-center text-white">
     <div class="mobile-swiper">
       <swiper-container
-        class="slideFullyVisibleClass"
-        :slides-per-view="3"
-        :space-between="5"
+        :free-mode="true"
         :breakpoints="{
-          768: {
-            slidesPerView: 3,
+          360: {
+            slidesPerView: 2.5,
+            spaceBetween: 0,
           },
         }"
       >
         <swiper-slide>
           <div class="m-2">
-            <img class="" :src="artist.albumCover" width="140" />
+            <img class="" :src="artist.albumCover" width="150" />
             <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
           </div></swiper-slide
         >
         <swiper-slide>
           <div class="m-2">
-            <img class="" :src="artist.albumCover" width="140" />
+            <img class="" :src="artist.albumCover" width="150" />
             <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
           </div></swiper-slide
         >
         <swiper-slide>
           <div class="m-2">
-            <img class="" :src="artist.albumCover" width="140" />
+            <img class="" :src="artist.albumCover" width="150" />
             <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
-          </div>
-        </swiper-slide>
+          </div></swiper-slide
+        >
         <swiper-slide>
           <div class="m-2">
-            <img class="" :src="artist.albumCover" width="140" />
+            <img class="" :src="artist.albumCover" width="150" />
             <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="m-2">
-            <img class="" :src="artist.albumCover" width="140" />
-            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="m-2">
-            <img class="" :src="artist.albumCover" width="140" />
-            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
-          </div>
-        </swiper-slide>
+          </div></swiper-slide
+        >
       </swiper-container>
     </div>
   </div>
@@ -152,57 +127,134 @@ import artist from '../data/artist.json';
     type="button"
     class="text-white text-2xl font-semibold hover:underline cursor-pointer"
   >
-    More of what you like
+    Made For You
   </button>
   <div class="py-1.5"></div>
   <div class="items-center text-white">
     <div class="mobile-swiper">
       <swiper-container
-        class="slideFullyVisibleClass"
-        :slides-per-view="3"
-        :space-between="5"
+        :free-mode="true"
         :breakpoints="{
-          768: {
-            slidesPerView: 3,
+          360: {
+            slidesPerView: 2.5,
+            spaceBetween: 0,
           },
         }"
       >
         <swiper-slide>
           <div class="m-2">
-            <img class="" :src="artist.albumCover" width="140" />
+            <img class="" :src="artist.albumCover" width="150" />
             <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
           </div></swiper-slide
         >
         <swiper-slide>
           <div class="m-2">
-            <img class="" :src="artist.albumCover" width="140" />
+            <img class="" :src="artist.albumCover" width="150" />
             <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
           </div></swiper-slide
         >
         <swiper-slide>
           <div class="m-2">
-            <img class="" :src="artist.albumCover" width="140" />
+            <img class="" :src="artist.albumCover" width="150" />
             <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
-          </div>
-        </swiper-slide>
+          </div></swiper-slide
+        >
         <swiper-slide>
           <div class="m-2">
-            <img class="" :src="artist.albumCover" width="140" />
+            <img class="" :src="artist.albumCover" width="150" />
             <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
-          </div>
-        </swiper-slide>
+          </div></swiper-slide
+        >
+      </swiper-container>
+    </div>
+  </div>
+  <button
+    type="button"
+    class="text-white text-2xl font-semibold hover:underline cursor-pointer"
+  >
+    Made For You
+  </button>
+  <div class="py-1.5"></div>
+  <div class="items-center text-white">
+    <div class="mobile-swiper">
+      <swiper-container
+        :free-mode="true"
+        :breakpoints="{
+          360: {
+            slidesPerView: 2.5,
+            spaceBetween: 0,
+          },
+        }"
+      >
         <swiper-slide>
           <div class="m-2">
-            <img class="" :src="artist.albumCover" width="140" />
+            <img class="" :src="artist.albumCover" width="150" />
             <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
-          </div>
-        </swiper-slide>
+          </div></swiper-slide
+        >
         <swiper-slide>
           <div class="m-2">
-            <img class="" :src="artist.albumCover" width="140" />
+            <img class="" :src="artist.albumCover" width="150" />
             <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
-          </div>
-        </swiper-slide>
+          </div></swiper-slide
+        >
+        <swiper-slide>
+          <div class="m-2">
+            <img class="" :src="artist.albumCover" width="150" />
+            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
+          </div></swiper-slide
+        >
+        <swiper-slide>
+          <div class="m-2">
+            <img class="" :src="artist.albumCover" width="150" />
+            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
+          </div></swiper-slide
+        >
+      </swiper-container>
+    </div>
+  </div>
+  <button
+    type="button"
+    class="text-white text-2xl font-semibold hover:underline cursor-pointer"
+  >
+    Made For You
+  </button>
+  <div class="py-1.5"></div>
+  <div class="items-center text-white">
+    <div class="mobile-swiper">
+      <swiper-container
+        :free-mode="true"
+        :breakpoints="{
+          360: {
+            slidesPerView: 2.5,
+            spaceBetween: 0,
+          },
+        }"
+      >
+        <swiper-slide>
+          <div class="m-2">
+            <img class="" :src="artist.albumCover" width="150" />
+            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
+          </div></swiper-slide
+        >
+        <swiper-slide>
+          <div class="m-2">
+            <img class="" :src="artist.albumCover" width="150" />
+            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
+          </div></swiper-slide
+        >
+        <swiper-slide>
+          <div class="m-2">
+            <img class="" :src="artist.albumCover" width="150" />
+            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
+          </div></swiper-slide
+        >
+        <swiper-slide>
+          <div class="m-2">
+            <img class="" :src="artist.albumCover" width="150" />
+            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
+          </div></swiper-slide
+        >
       </swiper-container>
     </div>
   </div>
