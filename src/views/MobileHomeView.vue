@@ -1,6 +1,8 @@
 <script setup>
 import { RouterLink } from 'vue-router';
-import HeartOutline from 'vue-material-design-icons/HeartOutline.vue';
+import BellOutline from 'vue-material-design-icons/BellOutline.vue';
+import ClockOutline from 'vue-material-design-icons/ClockOutline.vue';
+import CogOutline from 'vue-material-design-icons/CogOutline.vue';
 
 import playlists from '../data/playlists.json';
 import artist from '../data/artist.json';
@@ -9,9 +11,9 @@ import artist from '../data/artist.json';
   <div class="bg-red w-full flex items-center justify-between">
     <span class="text-white font-bold text-xl">Good Morning</span>
     <div class="flex items-center gap-3">
-      <HeartOutline fillColor="#FFFFFF" />
-      <HeartOutline fillColor="#FFFFFF" />
-      <HeartOutline fillColor="#FFFFFF" />
+      <BellOutline fillColor="#FFFFFF" />
+      <ClockOutline fillColor="#FFFFFF" />
+      <CogOutline fillColor="#FFFFFF" />
     </div>
   </div>
 
@@ -46,7 +48,11 @@ import artist from '../data/artist.json';
         :free-mode="true"
         :breakpoints="{
           360: {
-            slidesPerView: 2.5,
+            slidesPerView: 2.2,
+            spaceBetween: 0,
+          },
+          420: {
+            slidesPerView: 2.7,
             spaceBetween: 0,
           },
         }"
@@ -91,7 +97,11 @@ import artist from '../data/artist.json';
         :free-mode="true"
         :breakpoints="{
           360: {
-            slidesPerView: 2.5,
+            slidesPerView: 2.2,
+            spaceBetween: 0,
+          },
+          420: {
+            slidesPerView: 2.7,
             spaceBetween: 0,
           },
         }"
@@ -136,7 +146,11 @@ import artist from '../data/artist.json';
         :free-mode="true"
         :breakpoints="{
           360: {
-            slidesPerView: 2.5,
+            slidesPerView: 2.2,
+            spaceBetween: 0,
+          },
+          420: {
+            slidesPerView: 2.7,
             spaceBetween: 0,
           },
         }"
@@ -181,7 +195,11 @@ import artist from '../data/artist.json';
         :free-mode="true"
         :breakpoints="{
           360: {
-            slidesPerView: 2.5,
+            slidesPerView: 2.2,
+            spaceBetween: 0,
+          },
+          420: {
+            slidesPerView: 2.7,
             spaceBetween: 0,
           },
         }"
@@ -226,7 +244,11 @@ import artist from '../data/artist.json';
         :free-mode="true"
         :breakpoints="{
           360: {
-            slidesPerView: 2.5,
+            slidesPerView: 2.2,
+            spaceBetween: 0,
+          },
+          420: {
+            slidesPerView: 2.7,
             spaceBetween: 0,
           },
         }"
@@ -260,4 +282,9 @@ import artist from '../data/artist.json';
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.mobil-swiper .swiper {
+  width: 100% !important;
+  overflow: visible !important;
+}
+</style>

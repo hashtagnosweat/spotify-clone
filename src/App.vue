@@ -7,7 +7,7 @@ import LibraryItem from './components/LibraryItem.vue';
 import Navigation from './components/Navigation.vue';
 import playlists from './data/playlists.json';
 import HeartOutline from 'vue-material-design-icons/HeartOutline.vue';
-import MobileHomeView from './views/MobileHomeView.vue';
+import MobileNavigation from './components/MobileNavigation.vue';
 
 import { useSongStore } from './stores/song';
 import { storeToRefs } from 'pinia';
@@ -23,6 +23,11 @@ onMounted(() => {
   <!-- Mobile -->
   <div class="bg-black h-full md:hidden px-3 pt-4">
     <RouterView name="mobile" />
+    <div
+      class="flex items-center justify-evenly fixed bottom-0 right-0 left-0 h-[60px] bg-black opacity-80 mobile-nav"
+    >
+      <MobileNavigation />
+    </div>
   </div>
   <!-- Desktop -->
   <div class="hidden lg:block bg-black h-screen">
@@ -76,3 +81,9 @@ onMounted(() => {
     <MusicPlayer v-if="currentTrack" />
   </div>
 </template>
+
+<style scoped>
+.mobile-nav {
+  z-index: 200 !important;
+}
+</style>
