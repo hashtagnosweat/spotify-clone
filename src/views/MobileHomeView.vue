@@ -42,7 +42,125 @@ import artist from '../data/artist.json';
   <div class="items-center text-white">
     <div class="mobile-swiper">
       <swiper-container
+        class="slideFullyVisibleClass"
         :slides-per-view="3"
+        :space-between="5"
+        :breakpoints="{
+          768: {
+            slidesPerView: 3,
+          },
+        }"
+      >
+        <swiper-slide>
+          <div class="m-2">
+            <img class="" :src="artist.albumCover" width="140" />
+            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
+          </div></swiper-slide
+        >
+        <swiper-slide>
+          <div class="m-2">
+            <img class="" :src="artist.albumCover" width="140" />
+            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
+          </div></swiper-slide
+        >
+        <swiper-slide>
+          <div class="m-2">
+            <img class="" :src="artist.albumCover" width="140" />
+            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="m-2">
+            <img class="" :src="artist.albumCover" width="140" />
+            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="m-2">
+            <img class="" :src="artist.albumCover" width="140" />
+            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="m-2">
+            <img class="" :src="artist.albumCover" width="140" />
+            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+  <button
+    type="button"
+    class="text-white text-2xl font-semibold hover:underline cursor-pointer"
+  >
+    Jump back in
+  </button>
+  <div class="py-1.5"></div>
+  <div class="items-center text-white">
+    <div class="mobile-swiper">
+      <swiper-container
+        class="slideFullyVisibleClass"
+        :slides-per-view="3"
+        :space-between="5"
+        :breakpoints="{
+          768: {
+            slidesPerView: 3,
+          },
+        }"
+      >
+        <swiper-slide>
+          <div class="m-2">
+            <img class="" :src="artist.albumCover" width="140" />
+            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
+          </div></swiper-slide
+        >
+        <swiper-slide>
+          <div class="m-2">
+            <img class="" :src="artist.albumCover" width="140" />
+            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
+          </div></swiper-slide
+        >
+        <swiper-slide>
+          <div class="m-2">
+            <img class="" :src="artist.albumCover" width="140" />
+            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="m-2">
+            <img class="" :src="artist.albumCover" width="140" />
+            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="m-2">
+            <img class="" :src="artist.albumCover" width="140" />
+            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="m-2">
+            <img class="" :src="artist.albumCover" width="140" />
+            <div class="text-[#A7A7A7] pt-1 pb-3 text-[14px]">Halooo</div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+  <button
+    type="button"
+    class="text-white text-2xl font-semibold hover:underline cursor-pointer"
+  >
+    More of what you like
+  </button>
+  <div class="py-1.5"></div>
+  <div class="items-center text-white">
+    <div class="mobile-swiper">
+      <swiper-container
+        class="slideFullyVisibleClass"
+        :slides-per-view="3"
+        :space-between="5"
         :breakpoints="{
           768: {
             slidesPerView: 3,
@@ -90,9 +208,4 @@ import artist from '../data/artist.json';
   </div>
 </template>
 
-<style scoped>
-.swiper {
-  width: 100%;
-  overflow: visible !important;
-}
-</style>
+<style scoped></style>

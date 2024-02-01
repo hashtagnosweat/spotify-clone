@@ -21,11 +21,11 @@ onMounted(() => {
 
 <template>
   <!-- Mobile -->
-  <div class="bg-black h-full md:hidden px-6 pt-4">
+  <div class="bg-black h-full md:hidden px-3 pt-4">
     <RouterView name="mobile" />
   </div>
   <!-- Desktop -->
-  <div class="bg-black h-screen">
+  <div class="hidden lg:block bg-black h-screen">
     <div class="hidden lg:flex flex-col h-[calc(100%-97px)]">
       <div class="rounded-lg my-2 ml-2 px-6 pt-4 w-[420px] z-50 bg-[#111111]">
         <RouterLink to="/">
