@@ -46,27 +46,21 @@ const isHover = () => {
 <template>
   <div>
     <div class="flex items-center justify-between">
-      <RouterLink to="/library">
+      <div
+        class="flex items-center justify-start cursor-pointer"
+        @mouseenter="isHover()"
+        @mouseleave="isHover()"
+      >
+        <img :width="iconSize" :src="`/images/icons/${icon}.png`" alt="Icon" />
         <div
-          class="flex items-center justify-start cursor-pointer"
-          @mouseenter="isHover()"
-          @mouseleave="isHover()"
+          :class="textIsHover ? 'text-white' : 'text-gray-400'"
+          class="font-semibold text-[16px] ml-4 mt-0.5"
         >
-          <img
-            :width="iconSize"
-            :src="`/images/icons/${icon}.png`"
-            alt="Icon"
-          />
-          <div
-            :class="textIsHover ? 'text-white' : 'text-gray-400'"
-            class="font-semibold text-[16px] ml-4 mt-0.5"
-          >
-            <span :class="route.path == pageUrl ? 'text-white' : ''">{{
-              name
-            }}</span>
-          </div>
+          <span :class="route.path == pageUrl ? 'text-white' : ''">{{
+            name
+          }}</span>
         </div>
-      </RouterLink>
+      </div>
       <div class="rounded-full p-1.5 hover:bg-zinc-900">
         <Plus fillColor="#b2b2b2" :width="16" />
       </div>

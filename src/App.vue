@@ -6,6 +6,8 @@ import MusicPlayer from './components/MusicPlayer.vue';
 import LibraryItem from './components/LibraryItem.vue';
 import Navigation from './components/Navigation.vue';
 import playlists from './data/playlists.json';
+import HeartOutline from 'vue-material-design-icons/HeartOutline.vue';
+import MobileHomeView from './views/MobileHomeView.vue';
 
 import { useSongStore } from './stores/song';
 import { storeToRefs } from 'pinia';
@@ -18,13 +20,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="bg-black h-screen">
-    <!-- <div
-      class="hidden lg:flex w-[calc(100%-444px)] my-2 mr-2 h-[60px] rounded-t-lg fixed right-0 z-20 bg-[#101010] items-center justify-between"
-    >
-      <Navigation />
-    </div> -->
-
+  <!-- Mobile -->
+  <div class="bg-black h-full md:hidden px-6 pt-4">
+    <RouterView name="mobile" />
+  </div>
+  <!-- Desktop -->
+  <div class="bg-black h-screen">
     <div class="hidden lg:flex flex-col h-[calc(100%-97px)]">
       <div class="rounded-lg my-2 ml-2 px-6 pt-4 w-[420px] z-50 bg-[#111111]">
         <RouterLink to="/">
@@ -47,7 +48,7 @@ onMounted(() => {
         </RouterLink>
       </div>
       <div
-        class="rounded-lg ml-2 px-6 py-4 w-[420px] z-50 h-[550px] bg-[#111111] overflow-y-auto"
+        class="rounded-lg ml-2 px-6 py-4 w-[420px] z-50 h-full bg-[#111111] overflow-y-auto"
       >
         <LibraryItem
           class="ml-[1px]"
@@ -73,5 +74,5 @@ onMounted(() => {
     </div>
 
     <MusicPlayer v-if="currentTrack" />
-  </main>
+  </div>
 </template>

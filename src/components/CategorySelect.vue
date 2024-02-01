@@ -9,7 +9,7 @@ const props = defineProps({ category: String, image: String });
 const { category } = toRefs(props);
 </script>
 <template>
-  <RouterLink to="library">
+  <RouterLink to="/search">
     <div
       v-if="randColor.color"
       :style="`background-color: ${randColor.color};`"
