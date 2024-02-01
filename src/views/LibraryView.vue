@@ -54,13 +54,13 @@ const playFunc = () => {
     <div class="py-2 px-6">
       <div class="flex items-center w-full relative h-full">
         <img
-          class="rounded-sm z-[-1]"
+          class="rounded-sm"
           width="232"
           :src="playlists[1].albumCover"
           alt="Album Cover"
         />
 
-        <div class="w-full ml-6 mt-[110px] z-[-1]">
+        <div class="w-full ml-6 mt-[110px]">
           <div
             style="font-size: 13px"
             class="text-white w-full h-0 cursor-pointer font-semibold"

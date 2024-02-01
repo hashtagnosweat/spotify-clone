@@ -21,7 +21,7 @@ onMounted(() => {
 
 <template>
   <!-- Mobile -->
-  <div class="bg-black h-full md:hidden px-3 pt-4">
+  <div class="bg-black h-full md:hidden">
     <RouterView name="mobile" />
     <div
       class="flex items-center justify-evenly fixed bottom-0 right-0 left-0 h-[60px] bg-black opacity-80 mobile-nav"
@@ -70,7 +70,7 @@ onMounted(() => {
       class="hidden lg:block fixed right-0 top-0 my-2 mr-2 w-[calc(100%-444px)] h-[calc(100%-105px)] rounded-lg overflow-auto overflow-x-hidden bg-[#111111]"
     >
       <div
-        class="flex items-center justify-between sticky top-0 h-[60px] bg-black z-200"
+        class="flex items-center justify-between sticky top-0 h-[60px] bg-black z-200 desktop-nav"
       >
         <Navigation />
       </div>
@@ -84,6 +84,9 @@ onMounted(() => {
 
 <style scoped>
 .mobile-nav {
+  z-index: 200 !important;
+}
+.desktop-nav {
   z-index: 200 !important;
 }
 </style>

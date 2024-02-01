@@ -11,91 +11,120 @@ import CategorySelect from '../components/CategorySelect.vue';
         Browse All
       </button>
       <div
-        class="grid 3xl:grid-cols-7 xl:grid-cols-5 lg-grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-x-3 gap-y-3"
+        class="grid 3xl:grid-cols-7 xl:grid-cols-5 lg-grid-cols-4 md:grid-cols-3 gap-x-3 gap-y-3"
       >
         <CategorySelect
-          :key="index"
           category="Podcasts"
+          width="194"
+          height="194"
           image="https://picsum.photos/id/101/300/300"
         />
         <CategorySelect
-          :key="index"
           category="Podcasts"
+          width="194"
+          height="194"
           image="https://picsum.photos/id/101/300/300"
         />
         <CategorySelect
-          :key="index"
           category="Podcasts"
+          width="194"
+          height="194"
           image="https://picsum.photos/id/101/300/300"
         />
         <CategorySelect
-          :key="index"
           category="Podcasts"
+          width="194"
+          height="194"
           image="https://picsum.photos/id/101/300/300"
         />
         <CategorySelect
-          :key="index"
           category="Podcasts"
+          width="194"
+          height="194"
           image="https://picsum.photos/id/101/300/300"
         />
         <CategorySelect
-          :key="index"
           category="Podcasts"
+          width="194"
+          height="194"
           image="https://picsum.photos/id/101/300/300"
         />
         <CategorySelect
-          :key="index"
           category="Podcasts"
+          width="194"
+          height="194"
           image="https://picsum.photos/id/101/300/300"
         />
         <CategorySelect
-          :key="index"
           category="Podcasts"
+          width="194"
+          height="194"
           image="https://picsum.photos/id/101/300/300"
         />
         <CategorySelect
-          :key="index"
           category="Podcasts"
+          width="194"
+          height="194"
           image="https://picsum.photos/id/101/300/300"
         />
         <CategorySelect
-          :key="index"
           category="Podcasts"
+          width="194"
+          height="194"
           image="https://picsum.photos/id/101/300/300"
         />
         <CategorySelect
-          :key="index"
           category="Podcasts"
+          width="194"
+          height="194"
           image="https://picsum.photos/id/101/300/300"
         />
         <CategorySelect
-          :key="index"
           category="Podcasts"
+          width="194"
+          height="194"
           image="https://picsum.photos/id/101/300/300"
         />
         <CategorySelect
-          :key="index"
           category="Podcasts"
+          width="194"
+          height="194"
           image="https://picsum.photos/id/101/300/300"
         />
         <CategorySelect
-          :key="index"
           category="Podcasts"
+          width="194"
+          height="194"
           image="https://picsum.photos/id/101/300/300"
         />
         <CategorySelect
-          :key="index"
           category="Podcasts"
+          width="194"
+          height="194"
           image="https://picsum.photos/id/101/300/300"
         />
         <CategorySelect
-          :key="index"
           category="Podcasts"
+          width="194"
+          height="194"
           image="https://picsum.photos/id/101/300/300"
         />
         <CategorySelect
-          :key="index"
           category="Podcasts"
+          width="194"
+          height="194"
+          image="https://picsum.photos/id/101/300/300"
+        />
+        <CategorySelect
+          category="Podcasts"
+          width="194"
+          height="194"
+          image="https://picsum.photos/id/101/300/300"
+        />
+        <CategorySelect
+          category="Podcasts"
+          width="194"
+          height="194"
           image="https://picsum.photos/id/101/300/300"
         />
       </div>

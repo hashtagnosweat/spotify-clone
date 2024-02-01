@@ -47,3 +47,5 @@ let openMenu = ref(false);
     </ul>
   </span>
 </template>
+
+<style scoped></style>
