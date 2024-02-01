@@ -8,7 +8,7 @@ import CategorySelect from '../components/CategorySelect.vue';
         type="button"
         class="pb-6 text-white text-2xl font-semibold hover:underline cursor-pointer"
       >
-        Your top mixes
+        Browse All
       </button>
       <div
         class="grid 3xl:grid-cols-7 xl:grid-cols-5 lg-grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-x-3 gap-y-3"

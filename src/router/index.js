@@ -14,9 +14,11 @@ const router = createRouter({
       path: '/search',
       component: SearchView,
     },
+
     {
-      path: '/library',
+      path: '/library/:playlistId(\\d+)',
       component: LibraryView,
+      props: true,
     },
   ],
 });

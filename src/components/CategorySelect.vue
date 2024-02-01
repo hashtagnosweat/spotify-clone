@@ -13,7 +13,7 @@ const { category } = toRefs(props);
     <div
       v-if="randColor.color"
       :style="`background-color: ${randColor.color};`"
-      class="contrast-[2] brightness-[0.87] rounded-xl h-[194px] w-[194px] relative overflow-hidden"
+      class="contrast-[2] brightness-[0.87] rounded-xl h-[194px] w-[194px] relative overflow-hidden z-[-1]"
     >
       <div class="text-white pt-3 pl-3 font-semibold text-[23px]">
         {{ category }}

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, toRefs, watchEffect } from 'vue';
+import { ref, toRefs, watchEffect, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import { RouterLink } from 'vue-router';
 
@@ -12,9 +12,10 @@ const props = defineProps({
   iconSize: Number,
   pageUrl: String,
   name: String,
+  playlists: Object,
 });
 
-const { iconString, pageUrl, name, iconSize } = toRefs(props);
+const { iconString, pageUrl, name, iconSize, playlists } = toRefs(props);
 
 let icon = ref(null);
 let textIsHover = ref(false);
@@ -73,17 +74,34 @@ const isHover = () => {
 
     <div class="py-3.5"></div>
 
-    <div class="font-semibold text-gray-300 hover:text-white">
-      My Playlist #1
-    </div>
-    <div class="font-semibold text-gray-300 hover:text-white">
-      My Playlist #1
-    </div>
-    <div class="font-semibold text-gray-300 hover:text-white">
-      My Playlist #1
-    </div>
-    <div class="font-semibold text-gray-300 hover:text-white">
-      My Playlist #1
+    <div
+      v-for="playlist in playlists"
+      :key="playlist.id"
+      class="hover:bg-[#2A2929] rounded-md"
+    >
+      <RouterLink :to="`/library/${playlist.id}`">
+        <div class="flex items-center cursor-pointer">
+          <img
+            class="rounded-sm shadow-2xl"
+            :src="playlist.albumCover"
+            width="55"
+          />
+          <div class="ml-3">
+            <div class="text-[16px] text-white">
+              {{ playlist.name }}
+            </div>
+            <div class="text-[14px] text-gray-400">
+              <div class="flex">
+                <span>Playlist</span>
+                <div class="flex items-center">
+                  <div class="mx-1 mt-1 circle" />
+                  <span>{{ playlist.creator }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </RouterLink>
     </div>
   </div>
 </template>

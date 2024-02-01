@@ -37,7 +37,7 @@ let openMenu = ref(false);
 
   <span
     v-if="openMenu"
-    class="fixed w-[190px] bg-[#282828] shadow-2xl z-50 rounded-md top-[60px] right-[36px]"
+    class="fixed w-[190px] bg-[#282828] shadow-2xl z-50 rounded-md top-[60px] right-[36px] cursor-pointer"
   >
     <ul class="text-gray-200 text-[14px] p-1 rounded-md">
       <li class="px-4 py-2.5 hover:bg-[#3E3D3D] border-b border-b-zinc-700">

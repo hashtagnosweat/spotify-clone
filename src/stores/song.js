@@ -28,14 +28,13 @@ export const useSongStore = defineStore('song', {
       }, 200);
     },
 
-    // To play song
     playOrPauseSong() {
       if (this.audio.paused) {
         this.isPlaying = true;
         this.audio.play();
       } else {
         this.isPlaying = false;
-        this.audio.play();
+        this.audio.pause();
       }
     },
 
@@ -44,11 +43,18 @@ export const useSongStore = defineStore('song', {
         this.loadSong(artist, track);
         return;
       }
+
       this.playOrPauseSong();
     },
 
     prevSong(currentTrack) {
-      let track = artist.tracks[currentTrack - 2];
+      if (currentTrack.id === 1) {
+        let track = artist.tracks[artist.tracks.length - 1];
+        this.loadSong(artist, track);
+        return;
+      }
+
+      let track = artist.tracks[currentTrack.id - 2];
       this.loadSong(artist, track);
     },
 
@@ -61,6 +67,7 @@ export const useSongStore = defineStore('song', {
         this.loadSong(artist, track);
       }
     },
+
     playFromFirst() {
       this.resetState();
       let track = artist.tracks[0];
@@ -74,4 +81,5 @@ export const useSongStore = defineStore('song', {
       this.currentTrack = null;
     },
   },
+  persist: true,
 });
