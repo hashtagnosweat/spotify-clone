@@ -7,7 +7,7 @@ import Magnify from 'vue-material-design-icons/Magnify.vue';
 import ArrowLeft from 'vue-material-design-icons/ArrowLeft.vue';
 </script>
 <template>
-  <div class="px-3 pt-4 pb-[80px]">
+  <div class="px-3 pt-4 pb-[150px]">
     <RouterLink to="/library">
       <div class="w-full">
         <ArrowLeft fillColor="#FFFFFF" />
@@ -52,7 +52,7 @@ import ArrowLeft from 'vue-material-design-icons/ArrowLeft.vue';
       <span class="ml-3 text-white font-semibold text-md">hashtagnosweat</span>
     </div>
 
-    <div class="flex items-center mt-3">14h 54min</div>
+    <div class="flex items-center mt-3 text-white">14h 54min</div>
 
     <ul class="w-full" v-for="(track, index) in artist.tracks" :key="track">
       <SongRow :artist="artist" :track="track" :index="++index" />

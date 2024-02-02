@@ -115,7 +115,7 @@ watch(
           <div
             class="text-[11px] text-gray-400 hover:underline hover:text-white cursor-pointer"
           >
-            {{ currentTrack.name }}
+            {{ currentArtist.name }}
           </div>
         </div>
       </div>
@@ -204,7 +204,7 @@ watch(
 </template>
 
 <style>
-.rangeDotHidden[type='range']::-webkit-slider-thumb {
+.rangeDotHidden[type='range']:-webkit-slider-thumb {
   -webitkit-appearance: none;
   appearance: none;
   width: 0;

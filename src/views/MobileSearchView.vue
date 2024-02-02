@@ -4,7 +4,7 @@ import Magnify from 'vue-material-design-icons/Magnify.vue';
 import categories from '../data/categories.json';
 </script>
 <template>
-  <div class="px-3 pt-4 pb-[70px]">
+  <div class="px-3 pt-4 pb-[150px]">
     <button
       type="button"
       class="text-white text-xl font-semibold hover:underline cursor-pointer"

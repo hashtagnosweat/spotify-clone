@@ -9,7 +9,7 @@ import playlists from '../data/playlists.json';
 </script>
 
 <template>
-  <div class="px-3 pt-4 pb-[80px]">
+  <div class="px-3 pt-4 pb-[150px]">
     <div class="bg-red w-full flex items-center justify-between">
       <div class="flex items-center">
         <img
