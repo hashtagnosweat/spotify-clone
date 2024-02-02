@@ -21,7 +21,7 @@ const { category, image } = toRefs(props);
       {{ category }}
     </div>
     <img
-      class="absolute contrast-[0.55] -right-3.5 bottom-0 max-w-[90px] rotate-[20deg]"
+      class="absolute contrast-[0.55] -right-3.5 bottom-0 max-w-[90px] rounded-md rotate-[20deg]"
       :src="image || ''"
       alt=""
     />
