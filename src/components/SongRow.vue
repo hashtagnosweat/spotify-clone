@@ -47,7 +47,7 @@ onMounted(() => {
           class="font-semibold"
           :class="{
             'text-green-500': currentTrack && currentTrack.name === track.name,
-            'text-white': currentTrack && currentTrack.name !== track.name,
+            'text-white': currentTrack.name !== track.name,
           }"
         >
           {{ track.name }}
