@@ -3,6 +3,7 @@ import { ref, toRefs, onMounted } from 'vue';
 import HeartOutline from 'vue-material-design-icons/HeartOutline.vue';
 import Play from 'vue-material-design-icons/Play.vue';
 import Pause from 'vue-material-design-icons/Pause.vue';
+import DotsVertical from 'vue-material-design-icons/DotsVertical.vue';
 
 import { useSongStore } from '../stores/song.js';
 import { storeToRefs } from 'pinia';
@@ -33,7 +34,35 @@ onMounted(() => {
 
 <template>
   <li
-    class="flex items-center justify-between rounded-md hover:bg-[#2A2929]"
+    class="md:hidden flex items-center justify-between rounded-md"
+    @click="useSong.playOrPauseThisSong(artist, track)"
+  >
+    <div class="flex items-center w-full py-1.5">
+      <div class="mr-3">
+        <img :src="artist.albumCover" alt="" width="40" />
+      </div>
+
+      <div>
+        <div
+          class="font-semibold"
+          :class="{
+            'text-green-500': currentTrack && currentTrack.name === track.name,
+            'text-white': currentTrack && currentTrack.name !== track.name,
+          }"
+        >
+          {{ track.name }}
+        </div>
+        <div class="text-sm font-semibold text-gray-400">{{ artist.name }}</div>
+      </div>
+    </div>
+
+    <div class="text-gray-400 mr-3">
+      <DotsVertical />
+    </div>
+  </li>
+
+  <li
+    class="hidden md:flex items-center justify-between rounded-md hover:bg-[#2A2929]"
     @mouseenter="isHover = true"
     @mouseleave="isHover = false"
   >

@@ -254,7 +254,7 @@ watch(
 </template>
 
 <style>
-.rangeDotHidden[type='range']:-webkit-slider-thumb {
+.rangeDotHidden[type='range']::-webkit-slider-thumb {
   -webitkit-appearance: none;
   appearance: none;
   width: 0;
