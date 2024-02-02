@@ -63,6 +63,12 @@ const { playlists } = toRefs(props);
         title="Daily Mix 5"
         subTitle="Omar Apollo, Eloise, Rex Orange County and more"
       />
+      <HomeCard
+        :key="index"
+        image="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb0e2a3a2c664a4bbb14e44f8e/5/en/default"
+        title="Daily Mix 5"
+        subTitle="Omar Apollo, Eloise, Rex Orange County and more"
+      />
     </div>
   </div>
   <div class="py-2 px-6">
@@ -97,6 +103,12 @@ const { playlists } = toRefs(props);
         image="https://picsum.photos/id/60/300/300"
         title="I'm not crying"
         subTitle="Time for a good cry"
+      />
+      <HomeCard
+        :key="index"
+        image="https://picsum.photos/id/70/300/300"
+        title="Tapioca"
+        subTitle="Soft, chewy & good for the soul. uwu"
       />
       <HomeCard
         :key="index"

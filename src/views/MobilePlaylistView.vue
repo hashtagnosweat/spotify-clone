@@ -8,9 +8,11 @@ import ArrowLeft from 'vue-material-design-icons/ArrowLeft.vue';
 </script>
 <template>
   <div class="px-3 pt-4 pb-[80px]">
-    <div class="w-full">
-      <ArrowLeft fillColor="#FFFFFF" />
-    </div>
+    <RouterLink to="/library">
+      <div class="w-full">
+        <ArrowLeft fillColor="#FFFFFF" />
+      </div>
+    </RouterLink>
 
     <div class="flex items-center w-full pt-6 pb-4 gap-2">
       <div class="relative flex-grow">

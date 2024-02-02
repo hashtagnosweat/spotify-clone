@@ -39,7 +39,7 @@ import playlists from '../data/playlists.json';
     </div>
 
     <div
-      class="border-b-1 left-0 absolute bg-black h-[2px] my-2 overflow-x-hidden"
+      class="border-b-1 left-0 absolute bg-black h-[4px] my-2"
       style="width: calc(100%)"
     ></div>
 
