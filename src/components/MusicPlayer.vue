@@ -138,7 +138,7 @@ watch(
 
       <div ref="seekerContainer" class="flex items-center justify-center">
         <div
-          class="absolute h-[3px] z-10 inset-y-[55.5px] left-[17.3px] rounded-full z-100 w-0 bg-white"
+          class="absolute h-[3px] z-10 inset-y-[55.7px] left-[15px] rounded-full z-100 w-0 bg-white"
           :style="{ width: `calc(${range > 93 ? '93%' : range}%)` }"
         ></div>
         />
