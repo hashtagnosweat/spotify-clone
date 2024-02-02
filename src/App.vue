@@ -3,11 +3,9 @@ import { ref, onMounted } from 'vue';
 import { RouterLink, RouterView } from 'vue-router';
 import MenuItem from './components/MenuItem.vue';
 import MusicPlayer from './components/MusicPlayer.vue';
-import MobileMusicPlayer from './components/MobileMusicPlayer.vue';
 import LibraryItem from './components/LibraryItem.vue';
 import Navigation from './components/Navigation.vue';
 import playlists from './data/playlists.json';
-import HeartOutline from 'vue-material-design-icons/HeartOutline.vue';
 import MobileNavigation from './components/MobileNavigation.vue';
 
 import { useSongStore } from './stores/song';
@@ -29,7 +27,7 @@ onMounted(() => {
     >
       <MobileNavigation />
     </div>
-    <MobileMusicPlayer v-if="currentTrack" />
+    <MusicPlayer v-if="currentTrack" />
   </div>
   <!-- Desktop -->
   <div class="hidden lg:block bg-black h-screen">

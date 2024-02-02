@@ -72,7 +72,7 @@ const isHover = () => {
       :key="playlist.id"
       class="hover:bg-[#2A2929] rounded-md"
     >
-      <RouterLink :to="`/library/${playlist.id}`">
+      <RouterLink :to="`/playlist/${playlist.id}`">
         <div class="flex items-center cursor-pointer">
           <img
             class="rounded-sm shadow-2xl"

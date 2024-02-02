@@ -56,7 +56,7 @@ import playlists from '../data/playlists.json';
       :key="index"
       class="hover:bg-[#2A2929] rounded-md"
     >
-      <RouterLink :to="`/library/${playlist.id}`">
+      <RouterLink :to="`/playlist/${playlist.id}`">
         <div class="flex items-center mb-5">
           <img :src="playlist.albumCover" alt="" width="60" />
           <div class="ml-3">

@@ -32,7 +32,7 @@ const router = createRouter({
       },
     },
     {
-      path: '/library/:playlistId(\\d+)',
+      path: '/playlist/:playlistId(\\d+)',
       components: {
         default: LibraryView,
         mobile: MobilePlaylistView,
