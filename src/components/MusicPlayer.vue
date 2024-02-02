@@ -2,7 +2,6 @@
 import { ref, watch, onMounted } from 'vue';
 import MusicPlayerVolume from '../components/MusicPlayerVolume.vue';
 import HeartOutline from 'vue-material-design-icons/HeartOutline.vue';
-import PictureInPictureBottomRight from 'vue-material-design-icons/PictureInPictureBottomRight.vue';
 import Play from 'vue-material-design-icons/Play.vue';
 import Pause from 'vue-material-design-icons/Pause.vue';
 import SkipNext from 'vue-material-design-icons/SkipNext.vue';
@@ -135,10 +134,13 @@ watch(
           </button>
         </div>
       </div>
+      <!-- :style="`width: ${range}%`" -->
+
       <div ref="seekerContainer" class="flex items-center justify-center">
         <div
-          class="absolute h-[3px] z-10 inset-y-[56px] left-4 rounded-full z-100 w-0 bg-white"
-          :style="`width: ${range}%`"
+          class="absolute h-[3px] z-10 inset-y-[55.5px] left-[17.3px] rounded-full z-100 w-0 bg-white"
+          :style="{ width: `calc(${range > 93 ? '93%' : range}%)` }"
+        ></div>
         />
         <div
           class="absolute h-[3px] w-[93%] inset-y-[56px] bg-white bg-opacity-60 rounded-full"
@@ -172,11 +174,6 @@ watch(
 
       <div class="flex items-center ml-4">
         <HeartOutline fillColor="#9CA3AF" :size="20" />
-        <PictureInPictureBottomRight
-          class="ml-4"
-          fillColor="#FFFFFF"
-          :size="20"
-        />
       </div>
     </div>
 
