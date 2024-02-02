@@ -1,6 +1,5 @@
 <script setup>
 import { RouterLink } from 'vue-router';
-import artist from '../data/artist.json';
 import SongRow from '../components/SongRow.vue';
 import Play from 'vue-material-design-icons/Play.vue';
 import Pause from 'vue-material-design-icons/Pause.vue';
@@ -9,6 +8,7 @@ import ArrowLeft from 'vue-material-design-icons/ArrowLeft.vue';
 import ShuffleVariant from 'vue-material-design-icons/ShuffleVariant.vue';
 import DotsVertical from 'vue-material-design-icons/DotsVertical.vue';
 import AccountPlusOutline from 'vue-material-design-icons/AccountPlusOutline.vue';
+import artist from '../data/artist.json';
 
 import { useSongStore } from '../stores/song';
 import { storeToRefs } from 'pinia';
