@@ -21,7 +21,7 @@ onMounted(() => {
 
 <template>
   <!-- Mobile -->
-  <div class="bg-black h-full md:hidden">
+  <div class="bg-[#111111] h-full md:hidden">
     <RouterView name="mobile" />
     <div
       class="flex items-center justify-evenly fixed bottom-0 right-0 left-0 h-[60px] bg-black opacity-80 mobile-nav"

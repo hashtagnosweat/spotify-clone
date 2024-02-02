@@ -1,6 +1,7 @@
 <script setup>
 import MobileCategorySelect from '../components/MobileCategorySelect.vue';
 import Magnify from 'vue-material-design-icons/Magnify.vue';
+import categories from '../data/categories.json';
 </script>
 <template>
   <div class="px-3 pt-4 pb-[70px]">
@@ -34,10 +35,10 @@ import Magnify from 'vue-material-design-icons/Magnify.vue';
 
     <div class="flex items-center justify-center">
       <div class="grid grid-cols-2 gap-x-4 gap-y-4">
-        <div v-for="index in 13" :key="index">
+        <div v-for="(category, index) in categories" :key="index">
           <MobileCategorySelect
-            category="Podcasts"
-            image="https://picsum.photos/id/101/300/300"
+            :category="category.name"
+            :image="`https://picsum.photos/id/${category.imageId}/300/300`"
           />
         </div>
       </div>

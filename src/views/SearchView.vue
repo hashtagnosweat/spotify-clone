@@ -1,5 +1,6 @@
 <script setup>
 import CategorySelect from '../components/CategorySelect.vue';
+import categories from '../data/categories.json';
 </script>
 <template>
   <div>
@@ -13,10 +14,10 @@ import CategorySelect from '../components/CategorySelect.vue';
       <div
         class="grid 3xl:grid-cols-7 xl:grid-cols-5 lg-grid-cols-4 md:grid-cols-3 gap-x-5 gap-y-3"
       >
-        <div v-for="index in 30" :key="index">
+        <div v-for="(category, index) in categories" :key="index">
           <CategorySelect
-            category="Podcasts"
-            image="https://picsum.photos/id/101/300/300"
+            :category="category.name"
+            :image="`https://picsum.photos/id/${category.imageId}/300/300`"
           />
         </div>
       </div>

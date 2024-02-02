@@ -19,7 +19,7 @@ import LibraryShelves from 'vue-material-design-icons/LibraryShelves.vue';
       <span class="text-white text-[12px]">Search</span>
     </div>
   </RouterLink>
-  <RouterLink to="/library/1">
+  <RouterLink to="/library">
     <div class="flex flex-col items-center">
       <LibraryShelves fillColor="#FFFFFF" :size="25" />
       <span class="text-white text-[12px]">Your Library</span>

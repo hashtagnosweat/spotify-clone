@@ -2,7 +2,6 @@
 import { ref, toRefs, watchEffect, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import { RouterLink } from 'vue-router';
-
 import Plus from 'vue-material-design-icons/Plus.vue';
 
 const route = useRoute();
