@@ -15,13 +15,13 @@ const { category, image } = toRefs(props);
   <div
     v-if="randColor.color"
     :style="`background-color: ${randColor.color};`"
-    class="contrast-[2] brightness-[0.87] rounded-md relative overflow-hidden w-[203px] h-[203px]"
+    class="contrast-[2] brightness-[0.87] rounded-md relative overflow-hidden w-[155px] h-[100px]"
   >
-    <div class="text-white pt-3 pl-3 font-semibold text-[23px]">
+    <div class="text-white pt-3 pl-3 font-semibold text-[18px]">
       {{ category }}
     </div>
     <img
-      class="absolute contrast-[0.55] -right-3.5 bottom-0 max-w-[90px] rotate-[20deg]"
+      class="absolute contrast-[0.55] -right-1.5 bottom-0 max-w-[60px] rounded-md rotate-[20deg]"
       :src="image || ''"
       alt=""
     />
