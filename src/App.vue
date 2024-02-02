@@ -32,7 +32,7 @@ onMounted(() => {
   <!-- Desktop -->
   <div class="hidden lg:block bg-black h-screen">
     <div class="hidden lg:flex flex-col h-[calc(100%-97px)]">
-      <div class="rounded-lg my-2 ml-2 px-6 pt-4 w-[420px] z-50 bg-[#111111]">
+      <div class="rounded-lg my-2 ml-2 px-6 pt-4 w-[353px] z-50 bg-[#111111]">
         <RouterLink to="/">
           <MenuItem
             class="ml-[1px]"
@@ -53,7 +53,7 @@ onMounted(() => {
         </RouterLink>
       </div>
       <div
-        class="rounded-lg ml-2 px-6 py-4 w-[420px] z-50 h-full bg-[#111111] overflow-y-auto"
+        class="rounded-lg ml-2 px-6 py-4 w-[353px] z-50 h-full bg-[#111111] overflow-y-auto"
       >
         <LibraryItem
           class="ml-[1px]"
@@ -67,10 +67,10 @@ onMounted(() => {
     </div>
 
     <div
-      class="hidden lg:block fixed right-0 top-0 my-2 mr-2 w-[calc(100%-444px)] h-[calc(100%-105px)] rounded-lg overflow-auto overflow-x-hidden bg-[#111111]"
+      class="hidden lg:block fixed right-0 top-0 my-2 mr-2 w-[calc(100%-377px)] h-[calc(100%-105px)] rounded-lg overflow-auto overflow-x-hidden bg-[#111111]"
     >
       <div
-        class="flex items-center justify-between sticky top-0 h-[60px] bg-black z-200 desktop-nav"
+        class="flex items-center justify-between sticky top-0 h-[64px] bg-black z-200 desktop-nav"
       >
         <Navigation />
       </div>

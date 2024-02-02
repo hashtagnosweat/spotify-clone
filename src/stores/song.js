@@ -20,6 +20,7 @@ export const useSongStore = defineStore('song', {
       }
 
       this.audio = new Audio();
+      this.audio.volume = 0.2;
       this.audio.src = track.path;
 
       setTimeout(() => {

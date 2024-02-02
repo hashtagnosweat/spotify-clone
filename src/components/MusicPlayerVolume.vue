@@ -9,7 +9,7 @@ import { storeToRefs } from 'pinia';
 const useSong = useSongStore();
 const { isPlaying, audio, currentTrack, currentArtist } = storeToRefs(useSong);
 let isHover = ref(false);
-let vol = ref(50);
+let vol = ref(20);
 let volume = ref(null);
 
 onMounted(() => {
@@ -27,7 +27,7 @@ onMounted(() => {
     @mouseleave="isHover = false"
   >
     <input
-      @v-model="vol"
+      v-model="vol"
       ref="volume"
       type="range"
       class="mt-[24px] absolute rounded-full my-2 w-full h-0 z-40 appearance-none bg-opacity-100 focus:outline-none accent-white"

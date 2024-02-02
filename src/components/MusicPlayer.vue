@@ -163,6 +163,7 @@ watch(
         >
           {{ isTrackTimeCurrent }}
         </div>
+
         <div
           ref="seekerContainer"
           class="w-full relative mt-2 mb-3"
@@ -180,13 +181,14 @@ watch(
           <div
             class="mt-[6px] absolute h-[4px] z-10 inset-y-0 left-0 w-0"
             :style="`width: ${range}%`"
-            :class="isHover ? 'bg-green-500' : 'bg-white'"
+            :class="[isHover ? 'bg-green-500' : 'bg-white']"
           />
 
           <div
             class="absolute h-[4px] z-[-0] mt-[6px] inset-y-0 left-0 w-full bg-gray-500 rounded-full"
           />
         </div>
+
         <div
           v-if="isTrackTimeTotal"
           class="text-white text-[12px] pl-2 pt-[11px]"
@@ -202,7 +204,7 @@ watch(
 </template>
 
 <style>
-.rangeDotHidden[type='range']::webkit-slider-thumb {
+.rangeDotHidden[type='range']::-webkit-slider-thumb {
   -webitkit-appearance: none;
   appearance: none;
   width: 0;

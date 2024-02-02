@@ -9,40 +9,16 @@ import CategorySelect from '../components/CategorySelect.vue';
     >
       Browse All
     </button>
-    <div class="flex items-center justify-center">
-      <div class="grid grid-cols-2 gap-x-5 gap-y-5">
-        <CategorySelect
-          category="Podcasts"
-          image="https://picsum.photos/id/101/300/300"
-        />
-        <CategorySelect
-          category="Podcasts"
-          image="https://picsum.photos/id/101/300/300"
-        />
-        <CategorySelect
-          category="Podcasts"
-          image="https://picsum.photos/id/101/300/300"
-        />
-        <CategorySelect
-          category="Podcasts"
-          image="https://picsum.photos/id/101/300/300"
-        />
-        <CategorySelect
-          category="Podcasts"
-          image="https://picsum.photos/id/101/300/300"
-        />
-        <CategorySelect
-          category="Podcasts"
-          image="https://picsum.photos/id/101/300/300"
-        />
-        <CategorySelect
-          category="Podcasts"
-          image="https://picsum.photos/id/101/300/300"
-        />
-        <CategorySelect
-          category="Podcasts"
-          image="https://picsum.photos/id/101/300/300"
-        />
+    <div class="flex items-center justify-evenly">
+      <div class="grid grid-cols-2 gap-x-5 gap-y-4">
+        <div v-for="index in 10" :key="index">
+          <CategorySelect
+            category="Podcasts"
+            height="124"
+            width="170"
+            image="https://picsum.photos/id/101/300/300"
+          />
+        </div>
       </div>
     </div>
   </div>
