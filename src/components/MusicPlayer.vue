@@ -103,7 +103,7 @@ watch(
   <div
     id="MobileMusicPlayer"
     v-if="audio"
-    class="md:hidden flex fixed items-center bottom-[60px] mb-0.5 w-full justify-center mobile-music-player"
+    class="md:hidden flex fixed items-center bottom-[60px] w-full justify-center mobile-music-player"
   >
     <div
       :style="`background-color: ${randColor.color}; `"
@@ -134,11 +134,10 @@ watch(
           </button>
         </div>
       </div>
-      <!-- :style="`width: ${range}%`" -->
 
       <div ref="seekerContainer" class="flex items-center justify-center">
         <div
-          class="absolute h-[3px] z-10 inset-y-[56px] left-[14.3px] rounded-full z-100 w-0 bg-white"
+          class="absolute h-[3px] z-10 inset-y-[56px] left-[13.9px] rounded-full z-100 w-0 bg-white"
           :style="{ width: `calc(${range > 93 ? '93%' : range}%)` }"
         ></div>
         />

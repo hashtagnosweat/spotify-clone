@@ -2,9 +2,26 @@
 import { RouterLink } from 'vue-router';
 import artist from '../data/artist.json';
 import SongRow from '../components/SongRow.vue';
-
+import Play from 'vue-material-design-icons/Play.vue';
+import Pause from 'vue-material-design-icons/Pause.vue';
 import Magnify from 'vue-material-design-icons/Magnify.vue';
 import ArrowLeft from 'vue-material-design-icons/ArrowLeft.vue';
+import ShuffleVariant from 'vue-material-design-icons/ShuffleVariant.vue';
+import DotsVertical from 'vue-material-design-icons/DotsVertical.vue';
+import AccountPlusOutline from 'vue-material-design-icons/AccountPlusOutline.vue';
+
+import { useSongStore } from '../stores/song';
+import { storeToRefs } from 'pinia';
+const useSong = useSongStore();
+const { isPlaying, currentTrack, currentArtist } = storeToRefs(useSong);
+
+const playFunc = () => {
+  if (currentTrack.value) {
+    useSong.playOrPauseThisSong(currentArtist.value, currentTrack.value);
+    return;
+  }
+  useSong.playFromFirst();
+};
 </script>
 <template>
   <div class="px-3 pt-4 pb-[150px]">
@@ -52,7 +69,23 @@ import ArrowLeft from 'vue-material-design-icons/ArrowLeft.vue';
       <span class="ml-3 text-white font-semibold text-md">hashtagnosweat</span>
     </div>
 
-    <div class="flex items-center mt-3 text-white">14h 54min</div>
+    <div class="flex justify-between items-center my-2 text-white">
+      <div class="flex items-center justify-start gap-3">
+        <AccountPlusOutline :size="25" />
+        <DotsVertical :size="25" />
+      </div>
+      <div class="flex items-center gap-3 justify-end">
+        <ShuffleVariant fillColor="#1ed760" :size="30" />
+        <button
+          type="button"
+          class="p-2.5 rounded-full bg-[#1ed760]"
+          @click="playFunc()"
+        >
+          <Play v-if="!isPlaying" fillColor="#181818" :size="35" />
+          <Pause v-else fillColor="#181818" :size="35" />
+        </button>
+      </div>
+    </div>
 
     <ul class="w-full" v-for="(track, index) in artist.tracks" :key="track">
       <SongRow :artist="artist" :track="track" :index="++index" />

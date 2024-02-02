@@ -72,10 +72,3 @@ import playlists from '../data/playlists.json';
     </div>
   </div>
 </template>
-
-<style scoped>
-.mobil-swiper .swiper {
-  width: 100% !important;
-  overflow: visible !important;
-}
-</style>

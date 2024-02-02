@@ -30,7 +30,11 @@ import artist from '../data/artist.json';
           <div
             class="flex items-center bg-[#2b2926] hover:bg-[#4b4745] rounded-[4px]"
           >
-            <img :src="playlist.albumCover" width="48" class="rounded-[4px]" />
+            <img
+              :src="`https://picsum.photos/id/${playlist.id}/300/300`"
+              width="48"
+              class="rounded-[4px]"
+            />
             <span class="ml-2 text-sm font-semibold">{{ playlist.name }}</span>
           </div>
         </RouterLink>
