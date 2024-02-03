@@ -16,10 +16,11 @@ let isTrackTime = ref(null);
 const props = defineProps({
   track: Object,
   artist: Object,
+  playlist: Object,
   index: Number,
 });
 
-const { track, artist, index } = toRefs(props);
+const { track, artist, index, playlist } = toRefs(props);
 
 onMounted(() => {
   const audio = new Audio(track.value.path);
@@ -33,6 +34,7 @@ onMounted(() => {
 </script>
 
 <template>
+  <!-- Mobile -->
   <li
     class="md:hidden flex items-center justify-between rounded-md"
     @click="useSong.playOrPauseThisSong(artist, track)"
@@ -61,10 +63,12 @@ onMounted(() => {
     </div>
   </li>
 
+  <!-- Desktop -->
   <li
     class="hidden md:flex items-center justify-between rounded-md hover:bg-[#2A2929]"
     @mouseenter="isHover = true"
     @mouseleave="isHover = false"
+    v-if="playlist"
   >
     <div class="flex items-center w-full py-1.5">
       <div v-if="isHover" class="w-[40px] ml-[14px] mr-[6px] cursor-pointer">
@@ -101,12 +105,15 @@ onMounted(() => {
         <div
           :class="{
             'text-green-500': currentTrack && currentTrack.name === track.name,
+            'text-white': !(currentTrack && currentTrack.name === track.name),
           }"
-          class="text-white font-semibold"
+          class="font-semibold"
         >
           {{ track.name }}
         </div>
-        <div class="text-sm font-semibold text-gray-400">{{ artist.name }}</div>
+        <div class="text-sm font-semibold text-gray-400">
+          {{ playlist.name }}
+        </div>
       </div>
     </div>
 

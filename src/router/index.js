@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import SearchView from '../views/SearchView.vue';
-import LibraryView from '../views/LibraryView.vue';
+import PlaylistView from '../views/PlaylistView.vue';
 import MobileHomeView from '../views/MobileHomeView.vue';
 import MobileSearchView from '../views/MobileSearchView.vue';
 import MobileLibraryView from '../views/MobileLibraryView.vue';
@@ -34,7 +34,7 @@ const router = createRouter({
     {
       path: '/playlist/:playlistId(\\d+)',
       components: {
-        default: LibraryView,
+        default: PlaylistView,
         mobile: MobilePlaylistView,
       },
       props: true,

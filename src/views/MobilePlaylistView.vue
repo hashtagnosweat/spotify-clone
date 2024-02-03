@@ -1,5 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router';
+import { ref, onMounted, watchEffect } from 'vue';
+import { useRoute } from 'vue-router';
 import SongRow from '../components/SongRow.vue';
 import Play from 'vue-material-design-icons/Play.vue';
 import Pause from 'vue-material-design-icons/Pause.vue';
@@ -9,11 +11,35 @@ import ShuffleVariant from 'vue-material-design-icons/ShuffleVariant.vue';
 import DotsVertical from 'vue-material-design-icons/DotsVertical.vue';
 import AccountPlusOutline from 'vue-material-design-icons/AccountPlusOutline.vue';
 import artist from '../data/artist.json';
+import playlists from '../data/playlists.json';
 
 import { useSongStore } from '../stores/song';
 import { storeToRefs } from 'pinia';
 const useSong = useSongStore();
 const { isPlaying, currentTrack, currentArtist } = storeToRefs(useSong);
+
+const route = useRoute();
+let playlistId = ref(null);
+let filteredPlaylist = ref(null);
+
+onMounted(() => {
+  playlistId.value = parseInt(route.params.playlistId);
+  const result = playlists.find((playlist) => playlistId.value === playlist.id);
+  filteredPlaylist.value = result ? { ...result } : null;
+});
+
+watchEffect(() => {
+  if (route.params.playlistId !== playlistId.value) {
+    playlistId.value = parseInt(route.params.playlistId);
+
+    const result = playlists.find(
+      (playlist) => playlistId.value === playlist.id
+    );
+    console.log(result);
+    filteredPlaylist.value = { ...result };
+    console.log(filteredPlaylist.value);
+  }
+});
 
 const playFunc = () => {
   if (currentTrack.value) {
@@ -57,7 +83,7 @@ const playFunc = () => {
     </div>
 
     <div class="w-full">
-      <span class="text-white font-semibold text-[26px]">Beyond Happy</span>
+      <span class="text-white font-semibold text-[26px]">aaaa</span>
     </div>
 
     <div class="flex items-center mt-3">
@@ -66,7 +92,7 @@ const playFunc = () => {
         width="27"
         src="https://yt3.googleusercontent.com/yti/AGOGRCod5TyFy5fPJY_Miol6ybCTLTmPITpNhsXog7uGtA=s88-c-k-c0x00ffffff-no-rj"
       />
-      <span class="ml-3 text-white font-semibold text-md">hashtagnosweat</span>
+      <span class="ml-3 text-white font-semibold text-md">aa</span>
     </div>
 
     <div class="flex justify-between items-center my-2 text-white">
