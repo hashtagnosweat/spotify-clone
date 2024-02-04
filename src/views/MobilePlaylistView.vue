@@ -83,7 +83,9 @@ const playFunc = () => {
     </div>
 
     <div class="w-full">
-      <span class="text-white font-semibold text-[26px]">aaaa</span>
+      <span class="text-white font-semibold text-[26px]">{{
+        filteredPlaylist.name
+      }}</span>
     </div>
 
     <div class="flex items-center mt-3">
@@ -92,7 +94,9 @@ const playFunc = () => {
         width="27"
         src="https://yt3.googleusercontent.com/yti/AGOGRCod5TyFy5fPJY_Miol6ybCTLTmPITpNhsXog7uGtA=s88-c-k-c0x00ffffff-no-rj"
       />
-      <span class="ml-3 text-white font-semibold text-md">aa</span>
+      <span class="ml-3 text-white font-semibold text-md">{{
+        filteredPlaylist.creator
+      }}</span>
     </div>
 
     <div class="flex justify-between items-center my-2 text-white">
@@ -113,8 +117,17 @@ const playFunc = () => {
       </div>
     </div>
 
-    <ul class="w-full" v-for="(track, index) in artist.tracks" :key="track">
-      <SongRow :artist="artist" :track="track" :index="++index" />
+    <ul
+      class="w-full"
+      v-for="(track, index) in filteredPlaylist.tracks"
+      :key="track"
+    >
+      <SongRow
+        :artist="artist"
+        :track="track"
+        :playlist="filteredPlaylist"
+        :index="++index"
+      />
     </ul>
   </div>
 </template>

@@ -54,7 +54,9 @@ onMounted(() => {
         >
           {{ track.name }}
         </div>
-        <div class="text-sm font-semibold text-gray-400">{{ artist.name }}</div>
+        <div class="text-sm font-semibold text-gray-400">
+          {{ playlist.name }}
+        </div>
       </div>
     </div>
 

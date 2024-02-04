@@ -33,9 +33,7 @@ watchEffect(() => {
     const result = playlists.find(
       (playlist) => playlistId.value === playlist.id
     );
-    console.log(result);
-    filteredPlaylist.value = { ...result };
-    console.log(filteredPlaylist.value);
+    filteredPlaylist.value = result ? { ...result } : null;
   }
 });
 
