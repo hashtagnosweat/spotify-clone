@@ -80,42 +80,14 @@ const { playlists } = toRefs(props);
     </button>
     <div class="py-1.5"></div>
     <div class="flex items-center">
-      <HomeCard
-        :key="index"
-        image="https://picsum.photos/id/30/300/300"
-        title="Pasangan Jiwa"
-        subTitle="Lagu cinta terbaik dari kancah musik Indonesia."
-      />
-      <HomeCard
-        :key="index"
-        image="https://picsum.photos/id/42/300/300"
-        title="Rebahan"
-        subTitle="Musik agar kamu senyaman mungkin."
-      />
-      <HomeCard
-        :key="index"
-        image="https://picsum.photos/id/50/300/300"
-        title="Workspace"
-        subTitle="Music to relax"
-      />
-      <HomeCard
-        :key="index"
-        image="https://picsum.photos/id/60/300/300"
-        title="I'm not crying"
-        subTitle="Time for a good cry"
-      />
-      <HomeCard
-        :key="index"
-        image="https://picsum.photos/id/70/300/300"
-        title="Tapioca"
-        subTitle="Soft, chewy & good for the soul. uwu"
-      />
-      <HomeCard
-        :key="index"
-        image="https://picsum.photos/id/70/300/300"
-        title="Tapioca"
-        subTitle="Soft, chewy & good for the soul. uwu"
-      />
+      <div v-for="card in 6">
+        <HomeCard
+          :key="index"
+          image="/images/albumCovers/DiariesOfAHero.png"
+          title="Pasangan Jiwa"
+          subTitle="Lagu cinta terbaik dari kancah musik Indonesia."
+        />
+      </div>
     </div>
   </div>
 </template>

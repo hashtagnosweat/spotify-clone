@@ -12,7 +12,7 @@ import categories from '../data/categories.json';
         Browse All
       </button>
       <div
-        class="grid 3xl:grid-cols-7 xl:grid-cols-5 lg-grid-cols-4 md:grid-cols-3 gap-x-5 gap-y-3"
+        class="grid 3xl:grid-cols-7 xl:grid-cols-5 lg-grid-cols-4 md:grid-cols-3 gap-x-4 gap-y-3"
       >
         <div v-for="(category, index) in categories" :key="index">
           <CategorySelect
